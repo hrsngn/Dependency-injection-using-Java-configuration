@@ -9,3 +9,6 @@ run the PlainspringApplication using java IDE
 see the "some-string" printed
 
 ### <a name="2nd"></a>bean-factory-postprocessor : BeanFactoryPostProcessor and BeanPostProcessor Example
+run the PlainspringApplication using java IDE
+
+the mybean stringone populated 
