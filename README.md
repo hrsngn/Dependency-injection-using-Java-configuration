@@ -1,8 +1,6 @@
-Branch : 
+Master : [pookie](#pookie)Dependency injection using Java configuration
 
-Master : Dependency injection using Java configuration
-
-# Master
+### <a name="pookie"></a>Master
 run the PlainspringApplication using java IDE
 
 see the "some-string" printed
