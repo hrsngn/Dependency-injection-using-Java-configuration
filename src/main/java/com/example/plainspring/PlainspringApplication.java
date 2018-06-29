@@ -2,6 +2,7 @@ package com.example.plainspring;
 
 import com.example.plainspring.config.CustomConfig;
 import com.example.plainspring.model.MyBean;
+import com.example.plainspring.repository.RepoThree;
 import com.example.plainspring.service.ServiceOne;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -24,5 +25,8 @@ public class PlainspringApplication {
 		bean2.getPowerOf();
 		ServiceOne serviceOne = ctx.getBean(ServiceOne.class);
 		serviceOne.findTheString();
+		RepoThree repoThree = ctx.getBean(RepoThree.class);
+		repoThree.findAll();
+		System.out.println(repoThree.countUser());
 	}
 }
