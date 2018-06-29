@@ -2,6 +2,7 @@ package com.example.plainspring;
 
 import com.example.plainspring.config.CustomConfig;
 import com.example.plainspring.model.MyBean;
+import com.example.plainspring.model.User;
 import com.example.plainspring.repository.RepoThree;
 import com.example.plainspring.service.ServiceOne;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,6 +28,12 @@ public class PlainspringApplication {
 		serviceOne.findTheString();
 		RepoThree repoThree = ctx.getBean(RepoThree.class);
 		repoThree.findAll();
-		System.out.println(repoThree.countUser());
+		int existingUser = repoThree.countUser();
+		System.out.println(existingUser);
+		User newUser = new User();
+		newUser.setUser_name("User"+existingUser);
+		newUser.setPassword("123456");
+		newUser.setId(existingUser+1);
+		int result = repoThree.insertUser(newUser);
 	}
 }

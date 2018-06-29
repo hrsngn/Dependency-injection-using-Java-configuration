@@ -31,4 +31,8 @@ public class RepoThree {
         int counter = this.jdbcTemplate.queryForObject("select count(*) from user", Integer.class);
         return counter;
     }
+
+    public int insertUser(User user){
+        return jdbcTemplate.update("INSERT INTO user(id,user_name,password) VALUES(?,?,?)",user.getId(),user.getUser_name(),user.getPassword());
+    }
 }
