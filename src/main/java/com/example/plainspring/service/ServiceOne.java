@@ -10,7 +10,8 @@ public class ServiceOne {
         this.repoOne = repoOne;
     }
 
-    public String findTheString(){
-        return "SERVICE ONE : "+this.repoOne.findString();
+    public void findTheString(){
+        System.out.println("SERVICE ONE : "+this.repoOne.findString());
+//        return "SERVICE ONE : "+this.repoOne.findString();
     }
 }

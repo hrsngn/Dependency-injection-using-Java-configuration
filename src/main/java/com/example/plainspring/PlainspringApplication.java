@@ -2,12 +2,13 @@ package com.example.plainspring;
 
 import com.example.plainspring.config.CustomConfig;
 import com.example.plainspring.model.MyBean;
+import com.example.plainspring.service.ServiceOne;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = {
-		"com.example.plainspring"})
+//@ComponentScan(basePackages = {
+//		"com.example.plainspring"})
 @SpringBootApplication
 public class PlainspringApplication {
 
@@ -20,5 +21,8 @@ public class PlainspringApplication {
 		MyBean bean2= ctx.getBean(MyBean.class);
 		bean2.setName("Bean Two");
 		bean2.doSomething();
+		bean2.getPowerOf();
+		ServiceOne serviceOne = ctx.getBean(ServiceOne.class);
+		serviceOne.findTheString();
 	}
 }
